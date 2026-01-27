@@ -1,0 +1,47 @@
+<!-- Simple, guaranteed-to-work disclaimer modal -->
+<div style="position: fixed; top: 0; left: 0; right: 0; bottom: 0; z-index: 9999; background: rgba(0,0,0,0.8); display: flex; align-items: center; justify-content: center; padding: 20px;">
+  <div style="background: white; max-width: 600px; width: 100%; max-height: 80vh; overflow-y: auto; border-radius: 8px; padding: 30px; box-shadow: 0 10px 40px rgba(0,0,0,0.3);">
+    
+    <h2 style="font-size: 24px; font-weight: bold; margin-bottom: 20px; color: #1a1a2e;">Legal Notice</h2>
+    
+    <div style="margin-bottom: 20px; padding: 15px; background: #fff3cd; border-left: 4px solid #d4af37; border-radius: 4px;">
+      <p style="margin: 0; color: #856404;"><strong>⚠️ Please Read Carefully</strong></p>
+      <p style="margin: 5px 0 0 0; font-size: 14px; color: #856404;">By accessing this website, you acknowledge that you have read and understood the following terms.</p>
+    </div>
+    
+    <div style="font-size: 14px; line-height: 1.6; color: #4a4a4a; margin-bottom: 25px;">
+      <p style="margin-bottom: 15px;">
+        <strong>Attorney-Client Relationship:</strong> Information provided on this website does not constitute legal advice and is not intended to create an attorney-client relationship.
+      </p>
+      
+      <p style="margin-bottom: 15px;">
+        <strong>Confidentiality Notice:</strong> Do not send any confidential or privileged information through this website until an attorney-client relationship has been established.
+      </p>
+      
+      <p style="margin-bottom: 15px;">
+        <strong>No Guarantee of Results:</strong> Past results presented on this website do not guarantee or predict a similar outcome in any future case.
+      </p>
+      
+      <p style="margin-bottom: 0;">
+        <strong>Jurisdiction:</strong> Parthiv Joshi is admitted to practice law before courts in Gujarat, India. This website is for informational purposes only.
+      </p>
+    </div>
+    
+    <div style="display: flex; gap: 10px; flex-direction: column-reverse;">
+      <button 
+        (click)="onDecline()"
+        style="padding: 12px 24px; border: 2px solid #1a1a2e; background: transparent; color: #1a1a2e; border-radius: 6px; font-weight: 600; cursor: pointer; font-size: 14px;">
+        Decline & Exit
+      </button>
+      <button 
+        (click)="onAgree()"
+        style="padding: 12px 24px; background: #d4af37; color: #1a1a2e; border: none; border-radius: 6px; font-weight: 600; cursor: pointer; font-size: 14px;">
+        ✓ I Understand & Agree
+      </button>
+    </div>
+    
+    <p style="margin-top: 15px; font-size: 11px; color: #7a7a7a; text-align: center;">
+      By clicking "I Understand & Agree", you confirm that you have read and understood this notice
+    </p>
+  </div>
+</div>

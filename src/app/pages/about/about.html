@@ -1,0 +1,350 @@
+<!-- About Page -->
+<div class="min-h-screen bg-surface">
+  <!-- Hero Section -->
+  <!-- <section class="relative bg-gradient-to-br from-primary via-primary-light to-primary text-white py-20 overflow-hidden">
+    <div class="absolute inset-0 opacity-5" style="background-image: url('data:image/svg+xml,%3Csvg width=\'60\' height=\'60\' viewBox=\'0 0 60 60\' xmlns=\'http://www.w3.org/2000/svg\'%3E%3Cg fill=\'none\' fill-rule=\'evenodd\'%3E%3Cg fill=\'%23ffffff\' fill-opacity=\'1\'%3E%3Cpath d=\'M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z\'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E');"></div>
+    
+    <div class="container-custom relative z-10">
+      <div class="max-w-4xl">
+        <div class="flex items-center gap-2 mb-6">
+          <div class="w-12 h-0.5 bg-accent"></div>
+          <span class="text-accent text-sm font-medium tracking-wider uppercase">Profile</span>
+        </div>
+        <h1 class="font-display text-white mb-6">About the Practice</h1>
+        <p class="text-xl text-gray-200 leading-relaxed">
+          Strategic legal counsel rooted in academic excellence and practical experience across India's judicial system.
+        </p>
+      </div>
+    </div>
+  </section> -->
+
+  <!-- Main Content -->
+  <section class="section-spacing">
+    <div class="container-custom">
+      <div class="grid lg:grid-cols-3 gap-12">
+
+        <!-- Profile Card (Sidebar) -->
+        <div class="lg:col-span-1">
+          <div class="card-elegant sticky top-24">
+            <!-- Profile Image -->
+            <div class="img-container mb-6">
+              <img [src]="photo" [alt]="'Portrait of ' + name" class="w-full aspect-[3/4] object-cover" />
+            </div>
+
+            <!-- Name & Credentials -->
+            <div class="text-center mb-6 pb-6 border-b border-gray-200">
+              <h2 class="font-display text-2xl text-primary mb-2">{{ name }}</h2>
+              <div class="text-accent font-medium mb-4">Advocate</div>
+
+              <div class="space-y-2 text-sm text-secondary">
+                <div class="flex items-center justify-center gap-2">
+                  <svg class="w-4 h-4 text-accent" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                      d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                  </svg>
+                  <span>Bar Council of Gujarat</span>
+                </div>
+                <div class="text-xs text-tertiary">Admitted 2025</div>
+              </div>
+            </div>
+
+            <!-- Contact Info -->
+            <div class="space-y-4 mb-6">
+              <a [href]="'tel:' + phone"
+                class="flex items-center gap-3 text-secondary hover:text-accent transition-colors duration-300 group">
+                <div
+                  class="w-10 h-10 rounded-lg bg-accent/10 flex items-center justify-center group-hover:bg-accent/20 transition-colors duration-300">
+                  <svg class="w-5 h-5 text-accent" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                      d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
+                  </svg>
+                </div>
+                <div class="text-left">
+                  <div class="text-xs text-tertiary">Phone</div>
+                  <div class="text-sm font-medium">{{ phone }}</div>
+                </div>
+              </a>
+
+              <a [href]="'mailto:' + email"
+                class="flex items-center gap-3 text-secondary hover:text-accent transition-colors duration-300 group">
+                <div
+                  class="w-10 h-10 rounded-lg bg-accent/10 flex items-center justify-center group-hover:bg-accent/20 transition-colors duration-300">
+                  <svg class="w-5 h-5 text-accent" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                      d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+                  </svg>
+                </div>
+                <div class="text-left">
+                  <div class="text-xs text-tertiary">Email</div>
+                  <div class="text-sm font-medium break-all">{{ email }}</div>
+                </div>
+              </a>
+
+              <div class="flex items-start gap-3 text-secondary">
+                <div class="w-10 h-10 rounded-lg bg-accent/10 flex items-center justify-center flex-shrink-0">
+                  <svg class="w-5 h-5 text-accent" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                      d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                      d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
+                  </svg>
+                </div>
+                <div class="text-left">
+                  <div class="text-xs text-tertiary mb-1">Office</div>
+                  <address class="text-sm not-italic leading-relaxed">
+                    303, Classica-1, Left off Jaddu's Food Field, Kalawad Road, Rajkot – 360005, Gujarat, India
+                  </address>
+                </div>
+              </div>
+            </div>
+
+            <!-- CTA Button -->
+            <!-- <button class="btn btn-primary w-full">
+              Schedule Consultation
+            </button> -->
+          </div>
+        </div>
+
+        <!-- Main Content Area -->
+        <div class="lg:col-span-2 space-y-12">
+
+          <!-- Biography -->
+          <div>
+            <div class="flex items-center gap-3 mb-6">
+              <h2 class="font-display text-3xl text-primary">Professional Background</h2>
+            </div>
+            <div class="elegant-divider"></div>
+
+            <div class="space-y-6 text-secondary leading-relaxed">
+              <p class="text-lg">
+                Parthiv Joshi is a value-driven advocate enrolled with the Bar Council of Gujarat, practicing out of
+                Rajkot. He has graduated in B.A. LL.B. (Hons.), a five-year integrated law course, from the reputed
+                Gujarat National Law University, Gandhinagar.
+              </p>
+
+              <p class="text-lg">
+                His experience, through internships, spans both sides of the tax landscape – the taxpayer and the tax
+                administrator – equipping him with skills to tailor balanced and practical solutions. He has engaged at
+                every level of the Indian judicial system, from trial and adjudicatory forums to appellate and
+                constitutional courts.
+              </p>
+
+              <p class="text-lg">
+                Further, he has gained valuable insights into tax administration through field interactions and an
+                internship at the Central Board of Indirect Taxes, New Delhi. His key areas of interest include
+                constitutional law, indirect taxation, and commercial law.
+              </p>
+
+              <div class="bg-accent/5 border-l-4 border-accent p-6 rounded-r-lg my-8">
+                <p class="text-lg font-medium text-primary italic">
+                  "Driven by a commitment to effective and fair representation for all, bringing fresh energy and a
+                  principled approach to practice."
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Education & Credentials -->
+          <div>
+            <h2 class="font-display text-2xl text-primary mb-6">Education & Credentials</h2>
+            <div class="elegant-divider"></div>
+
+            <div class="grid md:grid-cols-2 gap-6 mt-8">
+              <div class="card-elegant">
+                <div class="flex items-start gap-4">
+                  <div class="w-12 h-12 rounded-lg bg-accent/10 flex items-center justify-center flex-shrink-0">
+                    <svg class="w-6 h-6 text-accent" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                        d="M12 14l9-5-9-5-9 5 9 5z" />
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                        d="M12 14l6.16-3.422a12.083 12.083 0 01.665 6.479A11.952 11.952 0 0012 20.055a11.952 11.952 0 00-6.824-2.998 12.078 12.078 0 01.665-6.479L12 14z" />
+                    </svg>
+                  </div>
+                  <div>
+                    <div class="font-display text-lg text-primary mb-1">B.A. LL.B. (Hons.)</div>
+                    <div class="text-sm text-secondary">Gujarat National Law University</div>
+                    <div class="text-xs text-tertiary mt-2">Five-year integrated program</div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="card-elegant">
+                <div class="flex items-start gap-4">
+                  <div class="w-12 h-12 rounded-lg bg-accent/10 flex items-center justify-center flex-shrink-0">
+                    <svg class="w-6 h-6 text-accent" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                        d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
+                    </svg>
+                  </div>
+                  <div>
+                    <div class="font-display text-lg text-primary mb-1">Bar Admission</div>
+                    <div class="text-sm text-secondary">Bar Council of Gujarat</div>
+                    <div class="text-xs text-tertiary mt-2">Enrolled 2025</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Experience -->
+          <div>
+            <h2 class="font-display text-2xl text-primary mb-6">Professional Experience</h2>
+            <div class="elegant-divider"></div>
+
+            <div class="space-y-6 mt-8">
+              <div class="decorative-line">
+                <div class="card-elegant border-l-0 rounded-l-none">
+                  <div class="flex items-start justify-between mb-3">
+                    <div>
+                      <div class="font-display text-lg text-primary">Central Board of Indirect Taxes</div>
+                      <div class="text-sm text-accent font-medium">Internship · New Delhi</div>
+                    </div>
+                  </div>
+                  <p class="text-secondary text-sm leading-relaxed">
+                    Gained valuable insights into tax administration through field interactions and exposure to
+                    policy-making processes at the national level.
+                  </p>
+                </div>
+              </div>
+
+              <div class="decorative-line">
+                <div class="card-elegant border-l-0 rounded-l-none">
+                  <div class="flex items-start justify-between mb-3">
+                    <div>
+                      <div class="font-display text-lg text-primary">Judicial Exposure</div>
+                      <div class="text-sm text-accent font-medium">Various Courts & Tribunals · Gujarat</div>
+                    </div>
+                  </div>
+                  <p class="text-secondary text-sm leading-relaxed">
+                    Engaged at every level of India's judicial system, from trial forums to appellate and constitutional
+                    courts, developing comprehensive litigation experience.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Practice Focus -->
+          <div>
+            <h2 class="font-display text-2xl text-primary mb-6">Practice Focus</h2>
+            <div class="elegant-divider"></div>
+
+            <div class="card-elegant mt-8 bg-gradient-to-br from-surface to-surface-alt">
+              <p class="text-lg text-secondary mb-6 leading-relaxed">
+                Original and appellate advocacy before various courts, tribunals, forums, and authorities in Gujarat.
+              </p>
+
+              <div class="grid md:grid-cols-2 gap-4">
+                <div class="flex items-start gap-3 p-4 bg-surface rounded-lg">
+                  <svg class="w-5 h-5 text-accent flex-shrink-0 mt-0.5" fill="none" stroke="currentColor"
+                    viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                      d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                  </svg>
+                  <div>
+                    <div class="font-medium text-primary text-sm">Constitutional Law</div>
+                  </div>
+                </div>
+
+                <div class="flex items-start gap-3 p-4 bg-surface rounded-lg">
+                  <svg class="w-5 h-5 text-accent flex-shrink-0 mt-0.5" fill="none" stroke="currentColor"
+                    viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                      d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                  </svg>
+                  <div>
+                    <div class="font-medium text-primary text-sm">Goods and Services Tax (GST)</div>
+                  </div>
+                </div>
+
+                <div class="flex items-start gap-3 p-4 bg-surface rounded-lg">
+                  <svg class="w-5 h-5 text-accent flex-shrink-0 mt-0.5" fill="none" stroke="currentColor"
+                    viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                      d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                  </svg>
+                  <div>
+                    <div class="font-medium text-primary text-sm">Customs & Trade Laws (DGFT)</div>
+                  </div>
+                </div>
+
+                <div class="flex items-start gap-3 p-4 bg-surface rounded-lg">
+                  <svg class="w-5 h-5 text-accent flex-shrink-0 mt-0.5" fill="none" stroke="currentColor"
+                    viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                      d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                  </svg>
+                  <div>
+                    <div class="font-medium text-primary text-sm">Finance & Corporate Laws</div>
+                  </div>
+                </div>
+
+                <div class="flex items-start gap-3 p-4 bg-surface rounded-lg">
+                  <svg class="w-5 h-5 text-accent flex-shrink-0 mt-0.5" fill="none" stroke="currentColor"
+                    viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                      d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                  </svg>
+                  <div>
+                    <div class="font-medium text-primary text-sm">Economic Offences (PMLA, NDPS, SAFEMA)</div>
+                  </div>
+                </div>
+
+                <div class="flex items-start gap-3 p-4 bg-surface rounded-lg">
+                  <svg class="w-5 h-5 text-accent flex-shrink-0 mt-0.5" fill="none" stroke="currentColor"
+                    viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                      d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                  </svg>
+                  <div>
+                    <div class="font-medium text-primary text-sm">Legacy Tax Laws (Excise, Service Tax)</div>
+                  </div>
+                </div>
+
+                <div class="flex items-start gap-3 p-4 bg-surface rounded-lg">
+                  <svg class="w-5 h-5 text-accent flex-shrink-0 mt-0.5" fill="none" stroke="currentColor"
+                    viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                      d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                  </svg>
+                  <div>
+                    <div class="font-medium text-primary text-sm">Service Law</div>
+                  </div>
+                </div>
+
+                <div class="flex items-start gap-3 p-4 bg-surface rounded-lg">
+                  <svg class="w-5 h-5 text-accent flex-shrink-0 mt-0.5" fill="none" stroke="currentColor"
+                    viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                      d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                  </svg>
+                  <div>
+                    <div class="font-medium text-primary text-sm">Business Laws (IP, Competition, Arbitration)</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- CTA Section -->
+          <!-- <div class="card-elegant bg-gradient-to-br from-primary to-primary-light text-white text-center">
+            <h3 class="font-display text-2xl mb-4">Interested in Working Together?</h3>
+            <p class="text-gray-200 mb-6 max-w-2xl mx-auto">
+              Schedule a consultation to discuss your legal needs and explore how we can assist you.
+            </p>
+            <div class="flex flex-col sm:flex-row gap-4 justify-center">
+              <a [href]="'tel:' + phone" class="btn btn-accent">
+                Call Now
+              </a>
+              <a [href]="'mailto:' + email"
+                class="btn btn-outline border-white text-white hover:bg-white hover:text-primary">
+                Send Email
+              </a>
+            </div>
+          </div> -->
+
+        </div>
+      </div>
+    </div>
+  </section>
+</div>

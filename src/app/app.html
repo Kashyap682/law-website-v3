@@ -1,0 +1,13 @@
+<!-- Disclaimer appears before all site content -->
+@if (!agreed()) {
+<app-disclaimer (agreed)="onAgreed()"></app-disclaimer>
+}
+
+<!-- Main content -->
+@if (agreed()) {
+<div class="relative">
+    <app-header (menuToggled)="onMenuToggle($event)"></app-header>
+    <router-outlet></router-outlet>
+    <app-footer></app-footer>
+</div>
+}

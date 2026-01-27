@@ -1,0 +1,195 @@
+<!-- Elegant Disclaimer Modal -->
+<div class="fixed inset-0 z-[100] flex items-center justify-center p-4 bg-black/60 backdrop-blur-sm animate-fade-in">
+  <div class="relative bg-surface rounded-2xl shadow-2xl max-w-3xl w-full max-h-[90vh] overflow-hidden animate-slide-up">
+    
+    <!-- Header with elegant accent -->
+    <div class="relative bg-gradient-to-br from-primary to-primary-light text-white px-8 py-10">
+      <div class="absolute top-0 right-0 w-64 h-64 bg-accent/10 rounded-full blur-3xl"></div>
+      <div class="relative z-10">
+        <div class="flex items-center gap-3 mb-4">
+          <svg class="w-10 h-10 text-accent" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+            <path d="M12 2v20M8 6H4l4 8h4l-4-8zM16 6h4l-4 8h-4l4-8z" stroke-linecap="round" stroke-linejoin="round"/>
+            <path d="M4 20h16" stroke-linecap="round"/>
+          </svg>
+          <div>
+            <h2 class="font-display text-2xl font-semibold">Legal Notice</h2>
+            <p class="text-sm text-gray-200">Important Information for Visitors</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Content -->
+    <div class="px-8 py-8 overflow-y-auto max-h-[calc(90vh-240px)]">
+      <div class="prose prose-sm max-w-none">
+        
+        <div class="bg-accent/5 border-l-4 border-accent p-6 rounded-r-lg mb-6">
+          <p class="text-base font-medium text-primary mb-2">
+            <svg class="w-5 h-5 inline mr-2 text-accent" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/>
+            </svg>
+            Please Read Carefully
+          </p>
+          <p class="text-sm text-secondary leading-relaxed mb-0">
+            By accessing and using this website, you acknowledge that you have read, understood, and agree to be bound by the following terms and conditions.
+          </p>
+        </div>
+
+        <div class="space-y-6 text-secondary">
+          <section>
+            <h3 class="font-display text-lg text-primary mb-3 flex items-center gap-2">
+              <span class="w-2 h-2 bg-accent rounded-full"></span>
+              Attorney-Client Relationship
+            </h3>
+            <p class="leading-relaxed">
+              Information provided on this website does not constitute legal advice and is not intended to create an attorney-client relationship. No attorney-client relationship will be formed by your use of this site or by any communication with us through this site.
+            </p>
+          </section>
+
+          <section>
+            <h3 class="font-display text-lg text-primary mb-3 flex items-center gap-2">
+              <span class="w-2 h-2 bg-accent rounded-full"></span>
+              Confidentiality Notice
+            </h3>
+            <p class="leading-relaxed">
+              Do not send any confidential or privileged information through this website until an attorney-client relationship has been established. Any information you send before such a relationship is established may not be protected by attorney-client privilege.
+            </p>
+          </section>
+
+          <section>
+            <h3 class="font-display text-lg text-primary mb-3 flex items-center gap-2">
+              <span class="w-2 h-2 bg-accent rounded-full"></span>
+              No Guarantee of Results
+            </h3>
+            <p class="leading-relaxed">
+              Past results and case studies presented on this website do not guarantee or predict a similar outcome in any future case or matter. Each legal matter depends on its own facts and circumstances.
+            </p>
+          </section>
+
+          <section>
+            <h3 class="font-display text-lg text-primary mb-3 flex items-center gap-2">
+              <span class="w-2 h-2 bg-accent rounded-full"></span>
+              Jurisdiction
+            </h3>
+            <p class="leading-relaxed">
+              Parthiv Joshi is admitted to practice law before the courts, tribunals, and authorities in the State of Gujarat, India. This website is intended for informational purposes and does not constitute an offer to provide legal services in any jurisdiction where such services would be unauthorized.
+            </p>
+          </section>
+
+          <section>
+            <h3 class="font-display text-lg text-primary mb-3 flex items-center gap-2">
+              <span class="w-2 h-2 bg-accent rounded-full"></span>
+              Content Disclaimer
+            </h3>
+            <p class="leading-relaxed">
+              While we strive to provide accurate and up-to-date information, the content on this website is provided "as is" without any warranties. Legal information and requirements change frequently, and you should not rely solely on information found on this site.
+            </p>
+          </section>
+
+          <section>
+            <h3 class="font-display text-lg text-primary mb-3 flex items-center gap-2">
+              <span class="w-2 h-2 bg-accent rounded-full"></span>
+              Professional Consultation
+            </h3>
+            <p class="leading-relaxed">
+              For specific legal advice tailored to your situation, please contact our office directly to schedule a consultation. We will be happy to discuss how we can assist you with your legal needs.
+            </p>
+          </section>
+        </div>
+
+        <div class="mt-8 p-6 bg-primary/5 rounded-xl border border-primary/10">
+          <p class="text-sm text-secondary leading-relaxed mb-0">
+            <strong class="text-primary">Contact for Legal Advice:</strong> If you require legal representation or advice, please contact us through the methods provided on this website to schedule a formal consultation.
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Footer Actions -->
+    <div class="px-8 py-6 bg-surface-alt border-t border-gray-200">
+      <div class="flex flex-col sm:flex-row gap-4 justify-end">
+        <button 
+          (click)="onDecline()"
+          class="btn btn-outline order-2 sm:order-1">
+          <svg class="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/>
+          </svg>
+          Decline & Exit
+        </button>
+        <button 
+          (click)="onAgree()"
+          class="btn btn-primary order-1 sm:order-2 group">
+          <svg class="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/>
+          </svg>
+          I Understand & Agree
+          <svg class="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7l5 5m0 0l-5 5m5-5H6"/>
+          </svg>
+        </button>
+      </div>
+      <p class="text-xs text-tertiary text-center mt-4">
+        By clicking "I Understand & Agree", you confirm that you have read and understood the above notice
+      </p>
+    </div>
+  </div>
+</div>
+
+<style>
+  /* Elegant animations */
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+
+  @keyframes slideUp {
+    from {
+      opacity: 0;
+      transform: translateY(30px) scale(0.95);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0) scale(1);
+    }
+  }
+
+  .animate-fade-in {
+    animation: fadeIn 0.3s ease-out;
+  }
+
+  .animate-slide-up {
+    animation: slideUp 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+
+  /* Prose styling for disclaimer content */
+  .prose h3 {
+    margin-top: 0;
+  }
+
+  .prose p {
+    margin-bottom: 0;
+  }
+
+  /* Custom scrollbar */
+  .overflow-y-auto::-webkit-scrollbar {
+    width: 8px;
+  }
+
+  .overflow-y-auto::-webkit-scrollbar-track {
+    background: var(--color-surface-alt);
+    border-radius: 4px;
+  }
+
+  .overflow-y-auto::-webkit-scrollbar-thumb {
+    background: var(--color-accent);
+    border-radius: 4px;
+  }
+
+  .overflow-y-auto::-webkit-scrollbar-thumb:hover {
+    background: var(--color-accent-light);
+  }
+</style>

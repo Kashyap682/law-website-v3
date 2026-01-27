@@ -1,0 +1,44 @@
+/* Ensure fixed overlays behave correctly on mobile */
+html,
+body {
+    height: 100%;
+}
+
+/* Prevent background scroll bleed on mobile */
+body {
+    overscroll-behavior: none;
+}
+
+/* Dialog container safety */
+[role="dialog"] {
+    overscroll-behavior: contain;
+}
+
+/* Smooth scrolling on iOS */
+[role="dialog"]>.overflow-y-auto {
+    -webkit-overflow-scrolling: touch;
+}
+
+/* Prevent horizontal overflow caused by long words / URLs */
+[role="dialog"] {
+    word-break: break-word;
+    overflow-wrap: anywhere;
+}
+
+/* iOS Safari viewport height fix */
+@supports (-webkit-touch-callout: none) {
+    [role="dialog"] {
+        max-height: 100dvh;
+    }
+}
+
+/* Optional: improve tap behavior on mobile */
+button {
+    touch-action: manipulation;
+}
+
+/* Optional: avoid accidental text selection on buttons */
+button {
+    -webkit-user-select: none;
+    user-select: none;
+}

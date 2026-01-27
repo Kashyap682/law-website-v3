@@ -1,0 +1,45 @@
+<header class="fixed top-0 left-0 right-0 z-50 transition-all duration-300" [class.bg-white]="!isTransparent()"
+  [class.shadow-md]="!isTransparent()" [class.bg-transparent]="isTransparent()">
+  <nav class="container mx-auto px-6 py-4 flex justify-between items-center">
+    <div class="text-2xl font-bold font-serif">
+      <a routerLink="/home" (click)="closeMenu()" [style.color]="isTransparent() ? '#ffffff' : '#1f2937'"
+        [style.text-shadow]="isTransparent() ? '0 2px 8px rgba(0,0,0,0.9), 0 0 2px rgba(0,0,0,0.9)' : 'none'">
+        Parthiv Joshi <span class="text-sm font-sans font-light">, Advocate</span>
+      </a>
+    </div>
+
+    <!-- Desktop Menu -->
+    <div class="hidden md:flex space-x-8 items-center">
+      <a routerLink="/home" routerLinkActive="text-blue-700" [routerLinkActiveOptions]="{exact: true}"
+        class="hover:text-blue-700 transition-colors" [style.color]="isTransparent() ? '#ffffff' : '#1f2937'"
+        [style.text-shadow]="isTransparent() ? '0 2px 8px rgba(0,0,0,0.9), 0 0 2px rgba(0,0,0,0.9)' : 'none'">Home</a>
+      <a routerLink="/blogs" routerLinkActive="text-blue-700" class="hover:text-blue-700 transition-colors"
+        [style.color]="isTransparent() ? '#ffffff' : '#1f2937'"
+        [style.text-shadow]="isTransparent() ? '0 2px 8px rgba(0,0,0,0.9), 0 0 2px rgba(0,0,0,0.9)' : 'none'">Blog</a>
+      <a routerLink="/about" routerLinkActive="text-blue-700" class="hover:text-blue-700 transition-colors"
+        [style.color]="isTransparent() ? '#ffffff' : '#1f2937'"
+        [style.text-shadow]="isTransparent() ? '0 2px 8px rgba(0,0,0,0.9), 0 0 2px rgba(0,0,0,0.9)' : 'none'">About</a>
+    </div>
+
+    <!-- Mobile Menu Button -->
+    <div class="md:hidden">
+      <button (click)="toggleMenu()" class="hamburger" [class.open]="isMenuOpen()" aria-label="Open menu"
+        [style.filter]="isTransparent() ? 'drop-shadow(0 2px 8px rgba(0,0,0,0.9))' : 'none'">
+        <div class="transition-colors" [style.background-color]="isTransparent() ? '#ffffff' : '#1f2937'"></div>
+        <div class="transition-colors" [style.background-color]="isTransparent() ? '#ffffff' : '#1f2937'"></div>
+        <div class="transition-colors" [style.background-color]="isTransparent() ? '#ffffff' : '#1f2937'"></div>
+      </button>
+    </div>
+  </nav>
+
+  <!-- Mobile Menu -->
+  @if (isMenuOpen()) {
+  <div class="md:hidden absolute top-full left-0 w-full bg-white shadow-lg border-t border-gray-200">
+    <div class="flex flex-col items-center space-y-6 py-8">
+      <a routerLink="/home" (click)="closeMenu()" class="text-gray-600 text-lg hover:text-blue-700">Home</a>
+      <a routerLink="/blogs" (click)="closeMenu()" class="text-gray-600 text-lg hover:text-blue-700">Blog</a>
+      <a routerLink="/about" (click)="closeMenu()" class="text-gray-600 text-lg hover:text-blue-700">About</a>
+    </div>
+  </div>
+  }
+</header>
