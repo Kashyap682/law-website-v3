@@ -151,3 +151,7 @@ Click "Agree" on the modal, and enjoy your sophisticated new website! 🎊
 Check `/DOCUMENTATION` folder for detailed guides.
 
 **Happy coding! 🚀**
+
+
+ng build --configuration production
+npx angular-cli-ghpages --dir=dist/law-website/browser

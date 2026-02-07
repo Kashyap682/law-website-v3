@@ -1,47 +1,73 @@
-<!-- Simple, guaranteed-to-work disclaimer modal -->
-<div style="position: fixed; top: 0; left: 0; right: 0; bottom: 0; z-index: 9999; background: rgba(0,0,0,0.8); display: flex; align-items: center; justify-content: center; padding: 20px;">
-  <div style="background: white; max-width: 600px; width: 100%; max-height: 80vh; overflow-y: auto; border-radius: 8px; padding: 30px; box-shadow: 0 10px 40px rgba(0,0,0,0.3);">
-    
-    <h2 style="font-size: 24px; font-weight: bold; margin-bottom: 20px; color: #1a1a2e;">Legal Notice</h2>
-    
-    <div style="margin-bottom: 20px; padding: 15px; background: #fff3cd; border-left: 4px solid #d4af37; border-radius: 4px;">
-      <p style="margin: 0; color: #856404;"><strong>⚠️ Please Read Carefully</strong></p>
-      <p style="margin: 5px 0 0 0; font-size: 14px; color: #856404;">By accessing this website, you acknowledge that you have read and understood the following terms.</p>
+<!-- Mobile-friendly, fully-rounded Disclaimer Modal -->
+<div class="fixed inset-0 z-50 flex items-center justify-center px-3 sm:px-6">
+  <!-- Backdrop -->
+  <div class="absolute inset-0 bg-black/70"></div>
+
+  <!-- Modal -->
+  <div class="relative z-10 w-full max-w-5xl bg-white
+               rounded-2xl overflow-hidden shadow-xl
+               max-h-[90vh] flex flex-col" role="dialog" aria-modal="true" aria-labelledby="disclaimer-title">
+    <!-- Header -->
+    <div class="px-5 pt-6 sm:px-8 sm:pt-8">
+      <h2 id="disclaimer-title" class="text-2xl sm:text-4xl font-semibold text-center">
+        Disclaimer
+      </h2>
     </div>
-    
-    <div style="font-size: 14px; line-height: 1.6; color: #4a4a4a; margin-bottom: 25px;">
-      <p style="margin-bottom: 15px;">
-        <strong>Attorney-Client Relationship:</strong> Information provided on this website does not constitute legal advice and is not intended to create an attorney-client relationship.
+
+    <!-- Scrollable Content -->
+    <div class="px-5 py-4 sm:px-8 sm:py-6 overflow-y-auto
+                   text-sm sm:text-lg text-slate-700 leading-relaxed">
+      <p class="mb-4">
+        The Bar Council of India prohibits solicitation and advertising by
+        advocates in any form or manner. By accessing this website,
+        <strong>www.advparthivjoshi.in</strong>, you acknowledge and confirm
+        that you are seeking information about the Office of Adv. Parthiv
+        Joshi (“the Office”) of your own accord and that there has been no
+        solicitation, advertisement, invitation, or inducement of any kind.
       </p>
-      
-      <p style="margin-bottom: 15px;">
-        <strong>Confidentiality Notice:</strong> Do not send any confidential or privileged information through this website until an attorney-client relationship has been established.
+
+      <p class="mb-4">
+        The content on this website is for general informational purposes
+        only and reflects information otherwise available on the internet,
+        public platforms, and social media. It should not be construed as
+        solicitation or advertisement. The content does not constitute legal
+        advice or opinion and does not create or invite any lawyer-client
+        relationship. You should seek independent legal advice for any
+        specific issue.
       </p>
-      
-      <p style="margin-bottom: 15px;">
-        <strong>No Guarantee of Results:</strong> Past results presented on this website do not guarantee or predict a similar outcome in any future case.
+
+      <p class="mb-4">
+        While all efforts are made to ensure accuracy, the Office is not
+        responsible for any errors, omissions, or consequences arising from
+        reliance on this information.
       </p>
-      
-      <p style="margin-bottom: 0;">
-        <strong>Jurisdiction:</strong> Parthiv Joshi is admitted to practice law before courts in Gujarat, India. This website is for informational purposes only.
+
+      <p class="mb-4">
+        All website content is the intellectual property of
+        <strong>Adv. Parthiv Joshi</strong>.
+      </p>
+
+      <p>
+        By clicking <strong>“I AGREE”</strong>, you confirm that you have
+        read, understood, and accepted the
+        <a href="/terms" class="text-blue-900 underline hover:text-blue-700">
+          Terms of Use
+        </a>.
       </p>
     </div>
-    
-    <div style="display: flex; gap: 10px; flex-direction: column-reverse;">
-      <button 
-        (click)="onDecline()"
-        style="padding: 12px 24px; border: 2px solid #1a1a2e; background: transparent; color: #1a1a2e; border-radius: 6px; font-weight: 600; cursor: pointer; font-size: 14px;">
-        Decline & Exit
+
+    <!-- Sticky Actions -->
+    <div class="px-5 py-4 sm:px-8 border-t bg-white
+                   flex flex-col-reverse sm:flex-row
+                   gap-3 justify-end">
+      <button (click)="onDecline()" class="w-full sm:w-auto px-4 py-2 rounded-lg
+                       border border-slate-300 hover:bg-slate-50">
+        DECLINE
       </button>
-      <button 
-        (click)="onAgree()"
-        style="padding: 12px 24px; background: #d4af37; color: #1a1a2e; border: none; border-radius: 6px; font-weight: 600; cursor: pointer; font-size: 14px;">
-        ✓ I Understand & Agree
+      <button (click)="onAgree()" class="w-full sm:w-auto px-4 py-2 rounded-lg
+                       bg-blue-800 text-white hover:opacity-95" autofocus>
+        I AGREE
       </button>
     </div>
-    
-    <p style="margin-top: 15px; font-size: 11px; color: #7a7a7a; text-align: center;">
-      By clicking "I Understand & Agree", you confirm that you have read and understood this notice
-    </p>
   </div>
 </div>
